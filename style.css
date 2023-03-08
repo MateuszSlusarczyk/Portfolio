@@ -119,21 +119,39 @@ section{
     font-size:44px;
     font-weight: bold;
 }
-#email{
+#Umiejetnosci{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#skills{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+}
+.card{
+    flex-basis:100%;
     display:flex;
     flex-direction: column;
-    font-size:18px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin-right:1%;
+    border: solid 0.2rem #FFF7D6;
 }
-#mail{
-    background-color:#464657;
-    width:20vh;
+.card fieldset{
+    flex-basis:33%;
+    border:none;
+    margin-bottom:1rem;
+    width: 100%;
+    text-align: center;
 }
-#tresc{
-    background-color:#464657;
-    height: 30vh;
-    width: 30vw;
-    text-align:left;
-    padding:0;
+.icon{
+    font-size:60px; 
+}
+.level{
+    font-size:28px;
+    font-weight: bold;
+}
+.desc{
+    font-size:24px;
 }
