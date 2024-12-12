@@ -23,6 +23,16 @@ export default function ProjectsSection() {
       images: ["/SoundHarbor.webp", "/Playlista.webp", "/Podstawowe.webp", "/Zaawansowane.webp"],
       link: "https://soundharbor.vercel.app",
     },
+    {
+      title: "QuizGrad",
+      description: "Aplikacja wykonana w ramach projektu zespołowego na studiach. QuizGrad to platforma do tworzenia i rozwiązywania quizów. Wykonana przy użyciu React, Tailwind CSS i Typescript. Najważniejszym elementem aplikacji jest implementacja rozwiązań działających w czasie rzeczywistym na serwerze - chociażby w postaci czasowo ograniczonych wyzwań quizowych.",
+      images: ["/QuizGrad.webp", "/QuizGradLogin.webp"],
+    },
+    {
+      title:"Tasker",
+      description: "Aplikacja do zarządzania zadaniami w firmie. Wykonana przy użyciu React, Tailwind CSS i Typescript. Pierwszy projekt w tych technologiach, najważniejszym punktem był system autoryzacji oraz kanban do zarządzania zadaniami przez pracownika.",
+      images: ["/Tasker.webp"],
+    }
   ];
   const maxColumns = 3;
   const numInactiveProjects =
@@ -63,12 +73,12 @@ export default function ProjectsSection() {
                 <a
                   href={projects[activeProject].link}
                   target="_blank"
-                  className="text-xl font-bold hover:text-blue-400 transition-all cursor-pointer mb-4 block"
+                  className={`text-xl font-bold transition-all cursor-pointer mb-4 block ${projects[activeProject].link ? 'hover:text-blue-400' : ''}`}
                 >
                   {projects[activeProject].title}
                 </a>
                 <p className="text-gray-400 mb-4">{projects[activeProject].description}</p>
-                <div className="flex items-center justify-center gap-4 " onClick={() => { setProject(activeProject)}}>
+                <div className="flex items-center justify-center md:gap-4 gap-1" onClick={() => { setProject(activeProject)}}>
                   <button
                     className="text-xl md:text-2xl"
                     onClick={(e) => {

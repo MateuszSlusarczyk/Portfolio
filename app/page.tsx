@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <ParallaxProvider>
       <main className="space-y-16 h-full relative overflow-hidden">
-        <Stars /> {/* Gwiazdy będą działać globalnie */}
+        <Stars /> 
         <HeroSection />
         <div className="h-20"></div>
         <AboutSection />
