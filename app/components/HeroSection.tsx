@@ -2,7 +2,6 @@
 
 import { Parallax } from 'react-scroll-parallax';
 import { FaArrowDown } from "react-icons/fa";
-import { useEffect } from 'react';
 
 export default function HeroSection() {
   return (

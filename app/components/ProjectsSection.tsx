@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { randomInt } from "crypto";
 
 export default function ProjectsSection() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -42,9 +41,6 @@ export default function ProjectsSection() {
     setCurrImage(0);
     }
   }
-  function getRandom(min:number, max:number) {
-    return Math.random() * (max - min) + min;
-  }
   return (
     <section className="py-10 px-6">
       <Parallax speed={-10}>
@@ -62,7 +58,7 @@ export default function ProjectsSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-800 p-6 rounded-lg col-span-full"
+                className="bg-gray-800 p-6   rounded-lg col-span-full"
               >
                 <a
                   href={projects[activeProject].link}

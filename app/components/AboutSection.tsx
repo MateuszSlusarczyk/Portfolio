@@ -1,7 +1,6 @@
 "use client";
 
 import { Parallax } from 'react-scroll-parallax';
-import Image from 'next/image';
 
 export default function AboutSection() {
   return (

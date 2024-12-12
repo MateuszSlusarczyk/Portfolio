@@ -1,5 +1,4 @@
 "use client";
-import type { Metadata } from "next";
 import "./globals.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 export default function RootLayout({
