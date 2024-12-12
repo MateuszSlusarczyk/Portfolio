@@ -20,7 +20,7 @@ export default function ProjectsSection() {
     {
       title: "Soundharbor",
       description: "Aplikacja rekomendująca muzykę na podstawie preferencji użytkownika. Wykonana przy użyciu React, Tailwind CSS i Typescript. Najważniejszym elementem aplikacji jest implementacja API Spotify.",
-      images: ["/Soundharbor.webp", "/Playlista.webp", "/Podstawowe.webp", "/Zaawansowane.webp"],
+      images: ["/SoundHarbor.webp", "/Playlista.webp", "/Podstawowe.webp", "/Zaawansowane.webp"],
       link: "https://soundharbor.vercel.app",
     },
   ];
