@@ -14,24 +14,20 @@ export default function ProjectsSection() {
   const projects = [
     {
       title: "Łzy Stawu",
-      description: "Przeglądarkowa, turowa gra rpg inspirowana grami typu Visual Novel.",
+      description: "Przeglądarkowa, turowa gra rpg inspirowana grami typu Visual Novel. Wykonana przy użyciu React, Tailwind CSS i Typescript. Najważniejszym elementem aplikacji jest implementacja React Redux w dużym projekcie.",
       images: ["/Menu.webp", "/Creator.webp", "/Dialog.webp"],
       link: "https://lzystawu.vercel.app",
     },
     {
-      title: "Portfolio",
-      description: "Moje portfolio, które aktualnie przeglądasz.",
-      images: ["/Portfolio.webp", "/Portfolio2.webp", "/Portfolio3.webp"],
-      link: "https://example.vercel.app",
-    },
-    {
-      title: "Inny Projekt",
-      description: "Przykładowy opis innego projektu.",
-      images: ["/Example1.webp", "/Example2.webp", "/Example3.webp"],
-      link: "https://example.vercel.app",
+      title: "Soundharbor",
+      description: "Aplikacja rekomendująca muzykę na podstawie preferencji użytkownika. Wykonana przy użyciu React, Tailwind CSS i Typescript. Najważniejszym elementem aplikacji jest implementacja API Spotify.",
+      images: ["/Soundharbor.webp", "/Playlista.webp", "/Podstawowe.webp", "/Zaawansowane.webp"],
+      link: "https://soundharbor.vercel.app",
     },
   ];
-
+  const maxColumns = 3;
+  const numInactiveProjects =
+    activeProject === null ? projects.length : projects.length - 1;
   const changeImage = (num: number) => {
     const images = projects[activeProject!].images;
     const newIndex = (currImage + num + images.length) % images.length;
@@ -55,13 +51,9 @@ export default function ProjectsSection() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Projekty</h2>
           <motion.div
-            className={`grid ${
-              activeProject === null
-                ? "grid-cols-1 md:grid-cols-3 gap-4"
-                : "grid-rows-1 grid-cols-2 gap-4"
-            }`}
-            layout
-          >
+  className={`grid grid-cols-${Math.min(numInactiveProjects, maxColumns)} gap-4 justify-center`}
+  layout
+>
             {/* Aktywny projekt w pierwszym rzędzie */}
             {activeProject !== null && (
               <motion.div
