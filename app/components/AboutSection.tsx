@@ -16,7 +16,7 @@ export default function AboutSection() {
     </Parallax>
     <Parallax speed={-10}>
     <div className="bg-gray-700 px-4 py-2 rounded-full shadow-md text-white hover:scale-110 transform transition-transform duration-300">
-        <a href="/CV.png" download="CV.png">Pobierz CV</a>
+        <a href="/CV.pdf" download="CV.png">Pobierz CV</a>
     </div>
     </Parallax>
     </section>
