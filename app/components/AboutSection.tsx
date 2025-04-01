@@ -18,7 +18,7 @@ export default function AboutSection({language}:LangProps) {
     },
   ENG: {
       title: "About Me",
-      description: "As a masters student in Częstochowa University of Technology, i dynamically grow my skills in programming. In my free time i create new, interesting projects, treating them as personal challenges. They also end up as useful and easy to navigate apps.",
+      description: "As a master's student in Częstochowa University of Technology, I dynamically grow my skills in programming. In my free time I create new, interesting projects, treating them as personal challenges. They also end up as useful and easy to navigate apps.",
       CV: "Download my resume",
       CV_Link: "/CV_EN.pdf"
     }
