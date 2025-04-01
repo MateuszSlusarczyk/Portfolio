@@ -26,15 +26,6 @@ export default function AboutSection({language, setLang}:LangProps) {
   };
 
 
-  const changeLanguage = (lang:string) => {
-    if (lang === "POL") {
-      setLang("POL");
-      
-    } else {
-      setLang("ENG");
-    }
-  }
-
   const t = translations[language]
   return (
     <section className="py-20 px-6 items-center justify-center flex flex-col gap-28 md:gap-16 ">

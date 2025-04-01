@@ -10,6 +10,7 @@ import Stars from "./components/Stars";
 import { useState } from "react";
 
 export default function HomePage() {
+  
   const [language, setLanguage] = useState<'POL' | 'ENG'>('ENG');
   return (
     <ParallaxProvider>
@@ -17,10 +18,10 @@ export default function HomePage() {
         <Stars /> 
         <HeroSection language={language} setLang={setLanguage}/>
         <div className="h-20"></div>
-        <AboutSection language={language} setLang={setLanguage} />
-        <ProjectsSection language={language} setLang={setLanguage} />
-        <SkillsSection language={language} setLang={setLanguage} />
-        <ContactSection language={language} setLang={setLanguage} />
+        <AboutSection language={language} />
+        <ProjectsSection language={language}  />
+        <SkillsSection language={language} />
+        <ContactSection language={language}  />
       </main>
     </ParallaxProvider>
   );
