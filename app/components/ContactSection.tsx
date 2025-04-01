@@ -5,10 +5,9 @@ import { Parallax } from "react-scroll-parallax";
 
 interface LangProps {
   language: "POL" | "ENG";
-  setLang: (lang: "POL" | "ENG") => void;
 }
 
-export default function ContactSection({ language, setLang }: LangProps) {
+export default function ContactSection({ language }: LangProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

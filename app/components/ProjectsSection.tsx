@@ -8,10 +8,9 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 interface LangProps {
   language: "POL" | "ENG";
-  setLang: (lang: "POL" | "ENG") => void;
 }
 
-export default function ProjectsSection({ language, setLang }: LangProps) {
+export default function ProjectsSection({ language }: LangProps) {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [currImage, setCurrImage] = useState(0);
 

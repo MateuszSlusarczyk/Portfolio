@@ -4,10 +4,9 @@ import { Parallax } from 'react-scroll-parallax';
 
 interface LangProps {
   language: 'POL' | 'ENG';
-  setLang: (lang: 'POL' | 'ENG') => void;
 }
 
-export default function AboutSection({language, setLang}:LangProps) {
+export default function AboutSection({language}:LangProps) {
   
 
   const translations = {

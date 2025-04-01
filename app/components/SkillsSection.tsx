@@ -4,11 +4,10 @@ import { Parallax } from "react-scroll-parallax";
 
 interface LangProps {
   language: 'POL' | 'ENG';
-  setLang: (lang: 'POL' | 'ENG') => void;
 }
 
 
-export default function SkillsSection({language, setLang}:LangProps) {
+export default function SkillsSection({language}:LangProps) {
   const translations = {
     POL: {
       title: "Umiejętności",
