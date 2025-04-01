@@ -10,20 +10,20 @@ export async function POST(request: Request) {
 
   // Konfiguracja transportera Nodemailer
   const transporter = nodemailer.createTransport({
-    host: "smtp.mail.yahoo.com", // Zastąp odpowiednim hostem SMTP
-    port: 465, // Zastąp odpowiednim portem
+    host: process.env.email_host, // Zastąp odpowiednim hostem SMTP
+    port: process.env.email_port, // Zastąp odpowiednim portem
     secure: true, // Ustaw na true, jeśli używasz SSL
     auth: {
-      user: "mateusz.slusarczyk@yahoo.com", // Twój e-mail
-      pass: "fjplpkfmypbbszny", // Hasło do e-maila
+      user: process.env.email, // Twój e-mail
+      pass: process.env.email_pass, // Hasło do e-maila
     },
   });
 
   try {
     // Wysyłanie e-maila
     await transporter.sendMail({
-      from: `"${name}" <mateusz.slusarczyk@yahoo.com>`, // Nadawca
-      to: "mateusz.slusarczyk@yahoo.com", // Odbiorca
+      from: process.env.email, // Nadawca
+      to: process.env.email, // Odbiorca
       subject: `Nowa wiadomość od ${name}`, // Temat wiadomości
       text: message, // Treść wiadomości w formie tekstowej
       html: `<p><strong>Imię:</strong> ${name}</p>
